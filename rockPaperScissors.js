@@ -20,3 +20,9 @@ function getComputerChoice() {
       return 'scissors';
   }
 }
+
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return 'the game was a tie';
+  }
+}
