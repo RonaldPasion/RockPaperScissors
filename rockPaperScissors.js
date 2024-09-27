@@ -25,4 +25,39 @@ function determineWinner(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
     return 'the game was a tie';
   }
+
+  if (userChoice === 'rock') {
+    if (computerChoice === 'paper') {
+      console.log('Computer won');
+    } else {
+      console.log('You won');
+    }
+  }
+
+  if (userChoice === 'paper') {
+    if (computerChoice === 'scissors') {
+      console.log('Computer won');
+    } else {
+      console.log('You won');
+    }
+  }
+
+  if (userChoice === 'scissors') {
+    if (computerChoice === 'rock') {
+      console.log('Computer won');
+    } else {
+      console.log('You won');
+    }
+  }
 }
+
+function playGame() {
+  const userChoice = getUserChoice('rock');
+  const computerChoice = getComputerChoice();
+  console.log(userChoice);
+  console.log(computerChoice);
+
+  console.log(determineWinner(userChoice, computerChoice));
+}
+
+playGame();
